@@ -111,11 +111,11 @@ module.exports = function (grunt) {
 		if (options.errorsOnly) {
 			// use underscore for templating directly rather than relying on
 			// grunt's impl of it
-			template = underscore.template(templates.errors_only, {
+			template = underscore.template(templates.errors_only)({
 				'obj': report
 			});
 		} else {
-			template = underscore.template(templates.standard, {
+			template = underscore.template(templates.standard)({
 				'obj': report
 			});
 		}
